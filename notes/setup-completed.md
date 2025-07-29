@@ -22,3 +22,16 @@
 - Create project templates
 - Set up development workflows
 
+
+## 🔧 Git Configuration Helpers
+
+- GitHub username reminder system
+- Smart Git aliases with context awareness  
+- Helper scripts in ~/dev/tools/bin/
+- Configuration scripts in ~/dev/tools/config/
+
+### Quick Commands
+- `git check-remote` - Check remotes with username reminder
+- `git github-remote repo-name` - Add remote with correct username
+- `git github-clone repo-name` - Clone with correct username
+

@@ -68,7 +68,8 @@ echo "npm: $(npm --version 2>/dev/null || echo -e "${RED}❌ npm not available${
 echo "Python: $(python3 --version 2>/dev/null || echo -e "${RED}❌ Python3 not installed${NC}")"
 echo "VS Code: $(code --version 2>/dev/null | head -1 || echo -e "${RED}❌ VS Code CLI not available${NC}")"
 
-# Check NVM
+# Check NVM after sourcing ~/.bashrc
+source ~/.bashrc
 if command -v nvm &> /dev/null; then
     echo "NVM: $(nvm --version)"
 else
@@ -78,6 +79,7 @@ echo ""
 
 # Check navigation aliases
 echo -e "${GREEN}=== Navigation Aliases ===${NC}"
+source ~/.bashrc  # Ensure aliases are loaded
 for alias_cmd in dev projects personal; do
     if alias "$alias_cmd" &> /dev/null; then
         echo "$alias_cmd: $(alias "$alias_cmd" | cut -d= -f2-)"
